@@ -28,7 +28,8 @@ if st.button('Ask!'):
             'max_tokens': max_tokens,
             'temperature': temperature,
             'top_p': top_p
-        }
+        },
+        'source': 'streamlit'
     })
 
     url = os.getenv('APIURL')
