@@ -13,10 +13,11 @@ load_dotenv()
 
 st.set_page_config(page_title='Ask Questions about the Christian Faith')
 
-llm_name = st.selectbox('Language model', ['mistral.mixtral-8x7b-instruct-v0:1'])
-max_tokens = st.number_input('max_tokens', min_value=0, value=4096)
-temperature = st.number_input('temperature', min_value=0.0, value=0.7)
-top_p = st.number_input('top_p', min_value=0.0, max_value=1.0, value=0.8)
+st.sidebar.title('Ask Questions about the Christian Faith')
+llm_name = st.sidebar.selectbox('Language model', ['mistral.mixtral-8x7b-instruct-v0:1'])
+max_tokens = st.sidebar.number_input('max_tokens', min_value=0, value=4096)
+temperature = st.sidebar.number_input('temperature', min_value=0.0, value=0.7)
+top_p = st.sidebar.number_input('top_p', min_value=0.0, max_value=1.0, value=0.8)
 
 question = st.text_area('Your Question')
 
